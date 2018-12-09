@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distributed Systems on Tonny Mutai</title>
+    <link>https://lestoni.github.io/tags/distributed-systems/</link>
+    <description>Recent content in Distributed Systems on Tonny Mutai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Nov 2016 14:10:11 +0300</lastBuildDate>
+    
+	<atom:link href="https://lestoni.github.io/tags/distributed-systems/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Concurrency vs Parallelism</title>
+      <link>https://lestoni.github.io/posts/concurrency-vs-parallelism/</link>
+      <pubDate>Tue, 22 Nov 2016 14:10:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/concurrency-vs-parallelism/</guid>
+      <description>Difference between concurrency and parallelism does not resonate with most people, including me, for a while now. Until i started learning Go and everything became clear. Particularly with this one concise explaination that has stuck with me:
+ Concurrency is a way to structure a program by breaking it into pieces that can be executed independently. Parallelism is about running those pieces simultaneously. Concurrency is about structure; parallelism is about execution.</description>
+    </item>
+    
+  </channel>
+</rss>

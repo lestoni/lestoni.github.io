@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://lestoni.github.io/about/</loc>
+    <lastmod>2018-11-19T09:33:44+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/posts/introducing-koncart/</loc>
+    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/posts/a-day-and-a-life/</loc>
+    <lastmod>2017-04-03T20:16:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/posts/concurrency-vs-parallelism/</loc>
+    <lastmod>2016-11-22T14:10:11+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/posts/hello-blogging/</loc>
+    <lastmod>2016-10-15T20:16:27+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/</loc>
+    <lastmod>2018-11-19T09:33:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/about/</loc>
+    <lastmod>2018-11-19T09:33:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/api/</loc>
+    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/author/</loc>
+    <lastmod>2016-10-15T20:16:27+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/books/</loc>
+    <lastmod>2017-04-03T20:16:27+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/</loc>
+    <lastmod>2018-11-19T09:33:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/concurrency/</loc>
+    <lastmod>2016-11-22T14:10:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/concurrency/</loc>
+    <lastmod>2016-11-22T14:10:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/devtools/</loc>
+    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/devtools/</loc>
+    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/distributed-systems/</loc>
+    <lastmod>2016-11-22T14:10:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/fintech/</loc>
+    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/fintech/</loc>
+    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/photography/</loc>
+    <lastmod>2017-04-03T20:16:27+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/photography/</loc>
+    <lastmod>2017-04-03T20:16:27+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/posts/</loc>
+    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/tags/</loc>
+    <lastmod>2018-11-19T09:33:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/</loc>
+    <lastmod>2018-11-19T09:33:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

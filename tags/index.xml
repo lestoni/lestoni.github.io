@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Tonny Mutai</title>
+    <link>https://lestoni.github.io/tags/</link>
+    <description>Recent content in Tags on Tonny Mutai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Nov 2018 09:33:44 +0300</lastBuildDate>
+    
+	<atom:link href="https://lestoni.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://lestoni.github.io/tags/about/</link>
+      <pubDate>Mon, 19 Nov 2018 09:33:44 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/tags/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Api</title>
+      <link>https://lestoni.github.io/tags/api/</link>
+      <pubDate>Sat, 22 Jul 2017 15:22:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concurrency</title>
+      <link>https://lestoni.github.io/tags/concurrency/</link>
+      <pubDate>Tue, 22 Nov 2016 14:10:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devtools</title>
+      <link>https://lestoni.github.io/tags/devtools/</link>
+      <pubDate>Sat, 22 Jul 2017 15:22:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/tags/devtools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://lestoni.github.io/tags/distributed-systems/</link>
+      <pubDate>Tue, 22 Nov 2016 14:10:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fintech</title>
+      <link>https://lestoni.github.io/tags/fintech/</link>
+      <pubDate>Sat, 22 Jul 2017 15:22:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/tags/fintech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photography</title>
+      <link>https://lestoni.github.io/tags/photography/</link>
+      <pubDate>Mon, 03 Apr 2017 20:16:27 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/tags/photography/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

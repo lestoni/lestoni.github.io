@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Tonny Mutai</title>
+    <link>https://lestoni.github.io/tags/about/</link>
+    <description>Recent content in About on Tonny Mutai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Nov 2018 09:33:44 +0300</lastBuildDate>
+    
+	<atom:link href="https://lestoni.github.io/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://lestoni.github.io/about/</link>
+      <pubDate>Mon, 19 Nov 2018 09:33:44 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/about/</guid>
+      <description>Hello there, i appreciate you stopping by, my name is Tony Mutai or lestoni if you prefer. I live in Nairobi, Kenya.
+I am a software engineer primarily specializing in designing and building of RESTFul API&amp;rsquo;s aka programming for the internets. The love for working with API’s stems from interest and enjoyment of working with web scale distributed and concurrent systems. I mostly code with NodeJS, Golang but i am working towards being a polyglot.</description>
+    </item>
+    
+    <item>
+      <title>Hello Blogging</title>
+      <link>https://lestoni.github.io/posts/hello-blogging/</link>
+      <pubDate>Sat, 15 Oct 2016 20:16:27 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/hello-blogging/</guid>
+      <description>I guess this is the hello world for blogging. For a quick introduction of who i am check my about page.
+I started blogging-ish this year but slothed down a bit(Procastination is a habit and not good my friend). But with the ideas, lessons and what not i have picked along the way, i think its time i did something good and started writing.
+With this blog i hope we shall learn, share, and engage together.</description>
+    </item>
+    
+  </channel>
+</rss>

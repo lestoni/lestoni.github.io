@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Tonny Mutai</title>
+    <link>https://lestoni.github.io/posts/</link>
+    <description>Recent content in Posts on Tonny Mutai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 22 Jul 2017 15:22:11 +0300</lastBuildDate>
+    
+	<atom:link href="https://lestoni.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introducing Koncart</title>
+      <link>https://lestoni.github.io/posts/introducing-koncart/</link>
+      <pubDate>Sat, 22 Jul 2017 15:22:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/introducing-koncart/</guid>
+      <description>I am excited to announce the launch of koncart, an idea turned startup(ish) that i have been working on for the last one year plus. Koncart is a toolset company that empowers fintech ideas with Devtools and Analytics dashboards. It is currently in private beta.
+The original idea was to build ECommerce Enabling APIs, which was conceptualized with my close friend and colleague in code John Adams and i. Fast Forward, i took the idea further after working with a few Fintech products and Startups and discovering some of the abstractions that needed a standalone platform.</description>
+    </item>
+    
+    <item>
+      <title>A Day and a Life</title>
+      <link>https://lestoni.github.io/posts/a-day-and-a-life/</link>
+      <pubDate>Mon, 03 Apr 2017 20:16:27 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/a-day-and-a-life/</guid>
+      <description>To the reader of this book and the curious a like thank you for checking out this book.
+Truthfully, this is was a random thought that crossed my mind. Having read some of the photography books, i thought i could write one too. I gathered some of the best photos i have taken and decided to do storytelling with them. Hopefully this is the first of many to come.
+This is a self-published book and freely available for download.</description>
+    </item>
+    
+    <item>
+      <title>Concurrency vs Parallelism</title>
+      <link>https://lestoni.github.io/posts/concurrency-vs-parallelism/</link>
+      <pubDate>Tue, 22 Nov 2016 14:10:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/concurrency-vs-parallelism/</guid>
+      <description>Difference between concurrency and parallelism does not resonate with most people, including me, for a while now. Until i started learning Go and everything became clear. Particularly with this one concise explaination that has stuck with me:
+ Concurrency is a way to structure a program by breaking it into pieces that can be executed independently. Parallelism is about running those pieces simultaneously. Concurrency is about structure; parallelism is about execution.</description>
+    </item>
+    
+    <item>
+      <title>Hello Blogging</title>
+      <link>https://lestoni.github.io/posts/hello-blogging/</link>
+      <pubDate>Sat, 15 Oct 2016 20:16:27 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/hello-blogging/</guid>
+      <description>I guess this is the hello world for blogging. For a quick introduction of who i am check my about page.
+I started blogging-ish this year but slothed down a bit(Procastination is a habit and not good my friend). But with the ideas, lessons and what not i have picked along the way, i think its time i did something good and started writing.
+With this blog i hope we shall learn, share, and engage together.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Author on Tonny Mutai</title>
+    <link>https://lestoni.github.io/categories/author/</link>
+    <description>Recent content in Author on Tonny Mutai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Oct 2016 20:16:27 +0300</lastBuildDate>
+    
+	<atom:link href="https://lestoni.github.io/categories/author/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello Blogging</title>
+      <link>https://lestoni.github.io/posts/hello-blogging/</link>
+      <pubDate>Sat, 15 Oct 2016 20:16:27 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/hello-blogging/</guid>
+      <description>I guess this is the hello world for blogging. For a quick introduction of who i am check my about page.
+I started blogging-ish this year but slothed down a bit(Procastination is a habit and not good my friend). But with the ideas, lessons and what not i have picked along the way, i think its time i did something good and started writing.
+With this blog i hope we shall learn, share, and engage together.</description>
+    </item>
+    
+  </channel>
+</rss>

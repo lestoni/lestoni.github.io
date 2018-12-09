@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on Tonny Mutai</title>
+    <link>https://lestoni.github.io/tags/api/</link>
+    <description>Recent content in Api on Tonny Mutai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 22 Jul 2017 15:22:11 +0300</lastBuildDate>
+    
+	<atom:link href="https://lestoni.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introducing Koncart</title>
+      <link>https://lestoni.github.io/posts/introducing-koncart/</link>
+      <pubDate>Sat, 22 Jul 2017 15:22:11 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/introducing-koncart/</guid>
+      <description>I am excited to announce the launch of koncart, an idea turned startup(ish) that i have been working on for the last one year plus. Koncart is a toolset company that empowers fintech ideas with Devtools and Analytics dashboards. It is currently in private beta.
+The original idea was to build ECommerce Enabling APIs, which was conceptualized with my close friend and colleague in code John Adams and i. Fast Forward, i took the idea further after working with a few Fintech products and Startups and discovering some of the abstractions that needed a standalone platform.</description>
+    </item>
+    
+  </channel>
+</rss>
