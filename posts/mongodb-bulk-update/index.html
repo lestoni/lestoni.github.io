@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://lestoni.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Mongodb Bulk Updates"/>
+  <meta name="twitter:description" content="At one point, in your backend you will have a case where you need to update a bulk of data, due one reason or another.
+In this case, i am going to focus on bulk documents updating in mongodb.
+Setup Start off your mongodb shell:
+$ mongod some_db Create a javascript file called bulk_write.js and add the following code . We will use this to in insert 10000 documents of receipts type document into the db."/>
+  
+    <meta name="twitter:site" content="@lestoni"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Tonny Mutai"/>
+  
+
+
+
+		
+		<meta name="author" content="Tonny Mutai">
+		<meta name="description" content="Musings and">
+		<meta name="generator" content="Hugo 0.52" />
+		<title>Mongodb Bulk Updates &middot; Tonny Mutai</title>
+		<link rel="shortcut icon" href="https://lestoni.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://lestoni.github.io/css/style.css">
+		<link rel="stylesheet" href="https://lestoni.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://lestoni.github.io/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://lestoni.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Tonny Mutai" />
+		
+
+		
+		<link rel="stylesheet" href="https://lestoni.github.io/syntax.css">
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://lestoni.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://lestoni.github.io/posts'>Archive</a>
+	<a href='https://lestoni.github.io/tags'>Tags</a>
+	<a href='https://lestoni.github.io/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://lestoni.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Mongodb Bulk Updates
+                    </h1>
+                    <h2 class="headline">
+                    Dec 6, 2018 00:35
+                    · 542 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://lestoni.github.io/tags/mongodb">mongodb</a>
+                          
+                              <a href="https://lestoni.github.io/tags/database">database</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#solutions">Solutions</a>
+<ul>
+<li><a href="#solution-1">Solution 1</a></li>
+<li><a href="#solution-2">Solution 2</a></li>
+<li><a href="#solution-3">Solution 3</a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#links">Links</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<p>At one point, in your backend you will have a case where you need to update
+a bulk of data, due one reason or another.</p>
+
+<p>In this case, i am going to focus on bulk documents updating in mongodb.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>Start off your mongodb shell:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mongod some_db</code></pre></div>
+
+<p>Create a javascript file called <em>bulk_write.js</em> and add the following code . We will use this to in insert 10000 documents of receipts type document into the db.</p>
+
+<pre><code class="language-js">var types = ['sale', 'refund', 'payment']
+var statuses = ['paid', 'pending', 'cancelled', 'declined']
+
+for (var i = 0; i &lt; 10000; i++) {
+  var now = (new Date()).toISOString();
+
+  db.receipts.insert({
+    type:   types[Math.floor(Math.random() * types.length)],
+    amount: (Math.random() * 10000).toFixed(2), // This returns the value as a string
+    status: statuses[Math.floor(Math.random() * statuses.length)],
+    created_at: now,
+    updated_at: now
+  })
+}
+
+</code></pre>
+
+<p>Let&rsquo;s insert some data to work with first of all using <code>load(&quot;./bulk_write.js&quot;)</code>:</p>
+
+<pre><code>&gt; load(&quot;./bulk_write.js&quot;)
+true
+&gt; db.receipts.findOne()
+{
+        &quot;_id&quot; : ObjectId(&quot;5c0fa2f990449412485ccc63&quot;),
+        &quot;type&quot; : &quot;payment&quot;,
+        &quot;amount&quot; : &quot;1310.30&quot;,
+        &quot;status&quot; : &quot;declined&quot;,
+        &quot;created_at&quot; : &quot;2018-12-11T11:43:53.635Z&quot;,
+        &quot;updated_at&quot; : &quot;2018-12-11T11:43:53.635Z&quot;
+}
+&gt;
+</code></pre>
+
+<h2 id="problem">Problem</h2>
+
+<p>At the beginning we had <code>amount</code> as <code>String</code> type and usually when it comes to money related things we need to work with <code>Number</code> type. At this point we need to do a bulk update of <code>amount</code> attribute to convert it to a <code>Number</code> type</p>
+
+<h2 id="solutions">Solutions</h2>
+
+<h3 id="solution-1">Solution 1</h3>
+
+<p>This is obvious route we would take but it&rsquo;s not an optimal solution.</p>
+
+<p>Create a file called <code>bulk_normal.js</code> and load it in mongodb shell to run it.</p>
+
+<pre><code class="language-js">print(&quot;Start&quot;, (new Date()).toISOString())
+
+db.receipts.find().snapshot().forEach(function(receipt){
+
+  db.receipts.updateOne({
+    _id: receipt._id
+  },{
+    $set: { amount: parseFloat(receipt.amount) }
+  })
+
+
+})
+
+print(&quot;End&quot;, (new Date()).toISOString())
+
+</code></pre>
+
+<p><strong>NB</strong>: I added timestamps in order to see how long it takes to run it.</p>
+
+<p>In my case:</p>
+
+<pre><code class="language-sh">&gt; load('./bulk_normal.js')
+Start 2018-12-11T11:55:08.895Z
+End 2018-12-11T11:55:11.903Z
+true
+&gt;
+</code></pre>
+
+<p>It took roughly around <code>~4secs</code>. Now If you have more documents and attributes to update, it&rsquo;d take a bit more time to update each and every document</p>
+
+<p>Since we want to be productive and have optimal solutions we have 2 solutions at our disposal.</p>
+
+<h3 id="solution-2">Solution 2</h3>
+
+<p>Create a <code>bulk_bulk_1.js</code> file and add the below code:</p>
+
+<pre><code class="language-js">var bulkOp = db.receipts.initializeUnorderedBulkOp();
+var index = 0;
+
+print(&quot;Start&quot;, (new Date()).toISOString())
+
+db.receipts.find().snapshot().forEach(function(receipt){
+  bulkOp
+    .find({ _id: receipt._id })
+    .updateOne({
+      $set: { amount: parseFloat(receipt.amount) }
+    })
+
+  index += 1
+
+  if (index % 1000 === 0) {
+    bulkOp.execute();
+    bulkOp = db.receipts.initializeUnorderedBulkOp();
+  }
+})
+
+print(&quot;End&quot;, (new Date()).toISOString())
+</code></pre>
+
+<p>Load it in mongodb shell as <code>load(./bulk_update_1.js)</code>.</p>
+
+<p>In my case, it produces the following:</p>
+
+<pre><code class="language-sh">&gt; load(./bulk_update_1.js)
+Start 2018-12-11T14:23:07.841Z
+End 2018-12-11T14:23:08.570Z
+true
+&gt; 
+</code></pre>
+
+<p>That is better performance than before from <code>~4secs</code> to <code>~1sec</code></p>
+
+<h3 id="solution-3">Solution 3</h3>
+
+<p>Create a <code>bulk_bulk_2.js</code> file and add the below code:</p>
+
+<pre><code class="language-js">var bulkOps = [];
+
+print(&quot;Start&quot;, (new Date()).toISOString())
+
+db.receipts.find().snapshot().forEach(function(receipt){
+  bulkOps.push({
+    &quot;updateOne&quot;: {
+      &quot;filter&quot;: { _id: receipt._id },
+      &quot;update&quot;: { $set: { amount: parseFloat(receipt.amount) } }
+    }
+  })
+
+  if (bulkOps.length === 1000) {
+    db.receipts.bulkWrite(bulkOps)
+    bulkOps = [];
+  }
+})
+
+print(&quot;End&quot;, (new Date()).toISOString())
+</code></pre>
+
+<p>Load it in mongodb shell as <code>load(./bulk_update_2.js)</code>.</p>
+
+<p>In my case, it produces the following:</p>
+
+<pre><code class="language-sh">&gt; load(./bulk_update_2.js)
+Start 2018-12-11T14:25:50.799Z
+End 2018-12-11T14:25:51.175Z
+true
+&gt; 
+</code></pre>
+
+<p>That is roughly <code>~1sec</code> as solution no. 2</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Use <code>db.collection.initializeUnorderedBulkOp()</code> if your logic doesn&rsquo;t mind the order of operations otherwise use <code>db.collection.initializeOrderedBulkOp()</code>. Both of these methods take at most 1000 operations at a time.</p>
+
+<p><code>db.collection.bulkWrite(bulkOps)</code> takes a collection of operations and executes them in order.</p>
+
+<h2 id="links">Links</h2>
+
+<ol>
+<li><a href="https://docs.mongodb.com/manual/reference/method/db.collection.initializeUnorderedBulkOp/">initializeUnorderedBulkOp()</a></li>
+<li><a href="https://docs.mongodb.com/manual/reference/method/db.collection.initializeOrderedBulkOp/">initializeOrderedBulkOp()</a></li>
+<li><a href="https://docs.mongodb.com/manual/reference/method/db.collection.bulkWrite/">bulkWrite(bulkOps)</a></li>
+</ol>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2flestoni.github.io%2fposts%2fmongodb-bulk-update%2f - Mongodb%20Bulk%20Updates by @lestoni"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/lestoni">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/lestoni">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> Tonny Mutai
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://lestoni.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://lestoni.github.io/js/main.js"></script>
+<script src="https://lestoni.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-60746371-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

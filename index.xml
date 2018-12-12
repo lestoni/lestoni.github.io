@@ -6,10 +6,22 @@
     <description>Recent content on Tonny Mutai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Nov 2018 09:33:44 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 06 Dec 2018 00:35:36 +0300</lastBuildDate>
     
 	<atom:link href="https://lestoni.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mongodb Bulk Updates</title>
+      <link>https://lestoni.github.io/posts/mongodb-bulk-update/</link>
+      <pubDate>Thu, 06 Dec 2018 00:35:36 +0300</pubDate>
+      
+      <guid>https://lestoni.github.io/posts/mongodb-bulk-update/</guid>
+      <description>At one point, in your backend you will have a case where you need to update a bulk of data, due one reason or another.
+In this case, i am going to focus on bulk documents updating in mongodb.
+Setup Start off your mongodb shell:
+$ mongod some_db Create a javascript file called bulk_write.js and add the following code . We will use this to in insert 10000 documents of receipts type document into the db.</description>
+    </item>
     
     <item>
       <title>About</title>

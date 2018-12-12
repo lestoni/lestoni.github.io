@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lestoni.github.io/posts/mongodb-bulk-update/</loc>
+    <lastmod>2018-12-06T00:35:36+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lestoni.github.io/about/</loc>
     <lastmod>2018-11-19T09:33:44+03:00</lastmod>
   </url>
@@ -76,6 +81,18 @@
   </url>
   
   <url>
+    <loc>https://lestoni.github.io/tags/database/</loc>
+    <lastmod>2018-12-06T00:35:36+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lestoni.github.io/categories/database/</loc>
+    <lastmod>2018-12-06T00:35:36+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lestoni.github.io/tags/devtools/</loc>
     <lastmod>2017-07-22T15:22:11+03:00</lastmod>
     <priority>0</priority>
@@ -106,6 +123,12 @@
   </url>
   
   <url>
+    <loc>https://lestoni.github.io/tags/mongodb/</loc>
+    <lastmod>2018-12-06T00:35:36+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lestoni.github.io/tags/photography/</loc>
     <lastmod>2017-04-03T20:16:27+03:00</lastmod>
     <priority>0</priority>
@@ -119,7 +142,7 @@
   
   <url>
     <loc>https://lestoni.github.io/posts/</loc>
-    <lastmod>2017-07-22T15:22:11+03:00</lastmod>
+    <lastmod>2018-12-06T00:35:36+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -131,7 +154,7 @@
   
   <url>
     <loc>https://lestoni.github.io/</loc>
-    <lastmod>2018-11-19T09:33:44+03:00</lastmod>
+    <lastmod>2018-12-06T00:35:36+03:00</lastmod>
     <priority>0</priority>
   </url>
   
